@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(100, 195, 172);
+  width: 900px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  border: 5px solid black;
+  padding: 0 10px;
+  box-shadow: 0 0 100px black;
+}
+.center {
+  margin: auto;
+}
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+}
+h2 {
+  font-family: sans-serif;
+  text-align: center;
+}
+.hidden{
+    display:none;
+}

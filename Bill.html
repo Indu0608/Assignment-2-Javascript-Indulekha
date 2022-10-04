@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment2 Second page</title>
+    <link rel="stylesheet" href="CSS/form.css" />
+  </head>
+  <body class="Secondpage">
+    <h3>Customer Information</h3>
+    <form
+      name="myform"
+      method="Post"
+      onsubmit="return ValidateUserInfo();"
+      action=""
+    >
+      <table>
+        <tr>
+          <td>
+            <lable for="CustName">Name:</lable><br />
+            <input
+              type="text"
+              id="CustName"
+              name="CustName"
+              placeholder="Customer Name"
+              required
+            />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustPhone">Phone Number:</lable><br />
+            <input
+              type="text"
+              id="CustPhone"
+              name="CustPhone"
+              placeholder="10 digit number"
+              required
+            />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustCredit">Credit Card Information:</lable><br />
+            <input
+              type="text"
+              id="CustCredit"
+              name="CustCredit"
+              placeholder="xxxx-xxxx-xxxx-xxxx"
+              required
+            />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustCrMnth">Credit Card Month Expiry:</lable><br />
+            <input
+              type="text"
+              id="CustCrMnth"
+              name="CustCrMnth"
+              placeholder="MM"
+              required
+            />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustCrYear">Credit Card year Expiry:</lable><br />
+            <input
+              type="text"
+              id="CustCrYear"
+              name="CustCrYear"
+              placeholder="YYYY"
+              required
+            />
+            <br />
+          </td>
+        </tr>
+      </table>
+      <br /><br />
+      <input type="submit" value="Generate the Bill" />
+      <br /><br />
+      <label id="error"></label>
+    </form>
+    <div id="invoice" class="hidden">
+        <table id="CustomerInfo">
+            <tr>
+                <th>Name</th>
+                <td id="CustomerName"></td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td id="CustomerPhone"></td>
+            </tr>
+        </table>
+        <table id="soldItems">
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+            </tr>
+            <tr>
+                <td colspan="3">Subtotal</td>
+                <td id="subtotal"></td>
+            </tr>
+            <tr>
+                <td colspan="3">GST</td>
+                <td id="gst"></td>
+            </tr>
+            <tr>
+                <td colspan="3">Total</td>
+                <td id="total"></td>
+            </tr>
+        </table>
+    </div>
+  </body>
+  <script src="JS/form.js"></script>
+</html>

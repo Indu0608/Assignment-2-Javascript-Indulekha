@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment2</title>
+  <link rel="stylesheet" href="CSS/form.css" />
+</head>
+
+<body>
+  <h1>LULU ONLINE HYPERMARKET</h1>
+  <h2>Where the world comes to shop!!!</h2>
+  <h3>Please select the items you would like to buy</h3>
+
+  <form name="myform" method="Post" onsubmit="return CalculateAmt();" action="">
+    <table id="itemList" class="center" border="1">
+      <tr>
+        <th>Sl No</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Shea butter</td>
+        <td>$10</td>
+        <td><input type="text" name="item1" id="item1" /></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mayyonise</td>
+        <td>$12.78</td>
+        <td><input type="text" name="item2" id="item2" /></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Marie Gold Biscuits</td>
+        <td>$8.17</td>
+        <td><input type="text" name="item3" id="item3" /></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Dairy Milk Silk</td>
+        <td>$3.99</td>
+        <td><input type="text" name="item4" id="item4" /></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Tropicana Mango pulp</td>
+        <td>$7.99</td>
+        <td><input type="text" name="item5" id="item5" /></td>
+      </tr>
+    </table>
+    <br /><br />
+
+    <label for="ask">Total amount</label>
+    <input type="submit" value="Calculate" />
+    <br /><br />
+    <label id="result"></label>
+  </form>
+  <div id="secondScreen" class="hidden">
+    <h3>Customer Information</h3>
+    <form name="myform" method="Post" onsubmit="return ValidateUserInfo();" action="">
+      <table>
+        <tr>
+          <td>
+            <lable for="CustName">Name:</lable><br />
+            <input type="text" id="CustName" name="CustName" placeholder="Customer Name" required />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustPhone">Phone Number:</lable><br />
+            <input type="text" id="CustPhone" name="CustPhone" placeholder="10 digit number" required />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustCredit">Credit Card Information:</lable><br />
+            <input type="text" id="CustCredit" name="CustCredit" placeholder="xxxx-xxxx-xxxx-xxxx" />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustCrMnth">Credit Card Month Expiry:</lable><br />
+            <input type="text" id="CustCrMnth" name="CustCrMnth" placeholder="MM" />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <lable for="CustCrYear">Credit Card year Expiry:</lable><br />
+            <input type="text" id="CustCrYear" name="CustCrYear" placeholder="YYYY" />
+            <br />
+          </td>
+        </tr>
+      </table>
+      <br /><br />
+      <input type="submit" value="Generate the Bill" />
+      <br /><br />
+      <label id="error"></label>
+    </form>
+    <div id="invoice" class="hidden">
+      <table id="CustomerInfo">
+        <tr>
+          <th>Name</th>
+          <td id="CustomerName"></td>
+        </tr>
+        <tr>
+          <th>Phone</th>
+          <td id="CustomerPhone"></td>
+        </tr>
+      </table>
+      <table id="soldItems">
+        <tr>
+          <td colspan="3">Subtotal</td>
+          <td id="subtotal"></td>
+        </tr>
+        <tr>
+          <td colspan="3">GST</td>
+          <td id="gst"></td>
+        </tr>
+        <tr>
+          <td colspan="3">Total</td>
+          <td id="total"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="JS/form.js"></script>
+
+</html>
